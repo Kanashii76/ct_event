@@ -1,3 +1,10 @@
+/* variables */
+:root {
+    --primary-color: white;
+    --primary-bg: #222;
+    --gold: #ff9500;
+}
+
 body {
     font-family: 'Cambria', serif;
     margin: 0;
@@ -24,6 +31,7 @@ ul {
 .navbar .logo {
     font-weight: bold;
     font-size: 1.2rem;
+    color: #ff9500;
 }
 
 .navbar ul {
@@ -39,4 +47,95 @@ ul {
 
 .navbar a:hover {
     color: #b3d9f0;
+}
+
+
+
+
+
+
+
+
+/* Footer stuff */
+
+.site-footer {
+    background-color: var(--primary-bg);
+    color: var(--primary-color);
+    padding: 60px 20px 20px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+}
+
+.footer-brand {
+    color: var(--gold);
+    margin-bottom: 15px;
+    font-size: 2rem;
+}
+
+.footer-links h3, .footer-contact h3, .footer-social h3 {
+    color: var(--gold);
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--gold);
+}
+
+.footer-contact p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icons a {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+
+.footer-bottom {
+    border-top: 1px solid #333355;
+    margin-top: 40px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: #8888aa;
 }
