@@ -513,6 +513,147 @@ main {
     margin: 0;
     line-height: 1.6;
 }
+/* Events Page */
+.events-hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, rgba(255, 149, 0, 0.1) 0%, rgba(255, 149, 0, 0.05) 100%);
+    border-radius: 16px;
+    margin: 60px 0;
+}
+.events-hero h1 {
+    font-size: 3rem;
+    margin: 0 0 20px 0;
+    color: var(--gold);
+    line-height: 1.2;
+}
+.events-hero p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+}
+.all-events {
+    padding: 60px;
+}
+.events-list {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+.event-card-large {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 40px;
+    align-items: flex-start;
+    background-color: rgba(255, 255, 255, 0.02);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 149, 0, 0.2);
+    transition: all 0.3s ease;
+}
+.event-card-large:hover {
+    background-color: rgba(255, 149, 0, 0.08);
+    border-color: rgba(255, 149, 0, 0.5);
+}
+.event-poster {
+    width: 280px;
+    height: 420px;
+    border-radius: 8px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.event-poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.event-details h3 {
+    font-size: 1.8rem;
+    color: var(--gold);
+    margin: 0 0 15px 0;
+}
+.event-full-date {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0 0 10px 0;
+    display: block;
+}
+.event-full-location {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0 0 20px 0;
+    display: block;
+}
+.event-full-description {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.7;
+    margin: 0 0 25px 0;
+}
+.event-meta {
+    display: flex;
+    gap: 30px;
+    margin: 20px 0 25px 0;
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 149, 0, 0.2);
+    border-bottom: 1px solid rgba(255, 149, 0, 0.2);
+}
+.event-price {
+    color: var(--gold);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+.event-spots {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.95rem;
+}
+.event-card-large .cta-button {
+    align-self: flex-start;
+}
+/* Event Info */
+events-info {
+    padding: 80px 0;
+    text-align: center;
+}
+.events-info h2 {
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    color: var(--gold);
+}
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 40px;
+}
+.info-card {
+    background-color: rgba(255, 149, 0, 0.06);
+    border: 1px solid rgba(255, 149, 0, 0.3);
+    border-radius: 12px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.info-card:hover {
+    background-color: rgba(255, 149, 0, 0.12);
+    border-color: var(--gold);
+    transform: translateY(-5px);
+}
+.info-icon {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    display: block;
+}
+.info-card h3 {
+    font-size: 1.4rem;
+    color: var(--gold);
+    margin: 0 0 15px 0;
+}
+.info-card p {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.6;
+    margin: 0;
+}
 /* Footer stuff */
 .site-footer {
     background-color: var(--primary-bg);
