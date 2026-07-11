@@ -218,7 +218,6 @@ main {
 .gallery-item {
     border-radius: 12px;
     overflow: hidden;
-    aspect-ratio: 1;
     transition: all 0.3s ease;
 }
 .gallery-item img {
