@@ -19,7 +19,225 @@
             <li><a href="faq.html">FAQ</a></li>
         </ul>
     </nav>
-    
+    <main>
+        <!-- Booking Page Header -->
+        <section class="booking-page-header">
+            <h1>Book Your Tickets</h1>
+            <p>Select your event and secure your spot at Moovie Event Center</p>
+        </section>
+
+        <!-- Booking Main Section -->
+        <section class="booking-main-section">
+            <form id="booking-form" class="booking-container">
+                <!-- Event Selection -->
+                <div class="booking-event-selection">
+                    <h2>Select Event</h2>
+                    <div class="booking-event-list">
+                        <!-- Two Angry Cows -->
+                        <div class="booking-event-card">
+                            <div class="booking-event-poster">
+                                <img src="images/angrycows.png" alt="Two Angry Cows poster">
+                            </div>
+                            <div class="booking-event-details">
+                                <h3>Two Angry Cows</h3>
+                                <span class="event-full-date">📅 Saturday, July 20 at 7:00 PM</span>
+                                <span class="event-full-location">🏞️ Meadowbrook Farms, Oregon</span>
+                                <p class="event-full-description">A classic Japanese film about rival cows who clash a decade after their rivalry began. Manes fly, and hooves stamp in this hilarious story. English subtitles.</p>
+                                <div class="event-meta">
+                                    <span class="event-price">$15/person</span>
+                                    <span class="event-spots">Seats Available: 8</span>
+                                </div>
+                                <label class="booking-radio-label">
+                                    <input type="radio" name="event" value="two-angry-cows" data-price="15" data-seats="8">
+                                    Select This Event
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Hoofloose -->
+                        <div class="booking-event-card">
+                            <div class="booking-event-poster">
+                                <img src="images/hoofloose.png" alt="Hoofloose poster">
+                            </div>
+                            <div class="booking-event-details">
+                                <h3>Hoofloose</h3>
+                                <span class="event-full-date">📅 Saturday, July 27 at 7:00 PM</span>
+                                <span class="event-full-location">🏞️ Meadowbrook Farms, Oregon</span>
+                                <p class="event-full-description">A young bovine uses dancing as an outlet for his stress of pasture life.</p>
+                                <div class="event-meta">
+                                    <span class="event-price">$15/person</span>
+                                    <span class="event-spots">Seats Available: 41</span>
+                                </div>
+                                <label class="booking-radio-label">
+                                    <input type="radio" name="event" value="hoofloose" data-price="15" data-seats="41">
+                                    Select This Event
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- The Horns of Winter -->
+                        <div class="booking-event-card booking-card-sold-out">
+                            <div class="booking-event-poster">
+                                <img src="images/winter.png" alt="The Horns of Winter poster">
+                            </div>
+                            <div class="booking-event-details">
+                                <h3>The Horns of Winter</h3>
+                                <span class="event-full-date">📅 Saturday, August 3 at 7:00 PM</span>
+                                <span class="event-full-location">🏞️ Meadowbrook Farms, Oregon</span>
+                                <p class="event-full-description">A Mission deep in enemy territory. A platoon of elite soldiers with attitude problems. And they're cows.</p>
+                                <div class="event-meta">
+                                    <span class="event-price">$15/person</span>
+                                    <span class="event-spots">Seats Available: Sold Out</span>
+                                </div>
+                                <label class="booking-radio-label disabled">
+                                    <input type="radio" name="event" value="horns-of-winter" disabled>
+                                    Sold Out
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- An Udder Mystery -->
+                        <div class="booking-event-card">
+                            <div class="booking-event-poster">
+                                <img src="images/uddermystery.png" alt="An Udder Mystery poster">
+                            </div>
+                            <div class="booking-event-details">
+                                <h3>An Udder Mystery</h3>
+                                <span class="event-full-date">📅 Saturday, August 10 at 7:00 PM</span>
+                                <span class="event-full-location">🏞️ Meadowbrook Farms, Oregon</span>
+                                <p class="event-full-description">When the Queen's jewelled milking bucket goes missing, it's up to quirky detective Harriet Longmoo to solve. This raunchy tail takes you on a wild hay-ride through London.</p>
+                                <div class="event-meta">
+                                    <span class="event-price">$15/person</span>
+                                    <span class="event-spots">Seats Available: 14</span>
+                                </div>
+                                <label class="booking-radio-label">
+                                    <input type="radio" name="event" value="udder-mystery" data-price="15" data-seats="14">
+                                    Select This Event
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- TBD -->
+                        <div class="booking-event-card">
+                            <div class="booking-event-poster">
+                                <img src="images/comingsoon.png" alt="TBD poster">
+                            </div>
+                            <div class="booking-event-details">
+                                <h3>TBD</h3>
+                                <span class="event-full-date">📅 Saturday, August 17 at 7:00 PM</span>
+                                <span class="event-full-location">🏞️ Meadowbrook Farms, Oregon</span>
+                                <p class="event-full-description">Title TBD</p>
+                                <div class="event-meta">
+                                    <span class="event-price">$15/person</span>
+                                    <span class="event-spots">Seats Available: 76</span>
+                                </div>
+                                <label class="booking-radio-label">
+                                    <input type="radio" name="event" value="tbd" data-price="15" data-seats="76">
+                                    Select This Event
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ticket Quantity -->
+                <div class="booking-ticket-info">
+                    <h2>Ticket Details</h2>
+                    <div class="booking-form-group">
+                        <label for="tickets">Number of Tickets ($15 each)</label>
+                        <input type="number" id="tickets" name="tickets" min="1" max="10" value="1" required>
+                    </div>
+                    <div class="booking-price-summary">
+                        <p>Total: <strong id="total-price">$15.00</strong></p>
+                    </div>
+                </div>
+
+                <!-- Customer Information -->
+                <div class="booking-customer-section">
+                    <h2>Your Information</h2>
+                    <div class="booking-form-row">
+                        <div class="booking-form-group">
+                            <label for="first-name">First Name *</label>
+                            <input type="text" id="first-name" name="first-name" required>
+                        </div>
+                        <div class="booking-form-group">
+                            <label for="last-name">Last Name *</label>
+                            <input type="text" id="last-name" name="last-name" required>
+                        </div>
+                    </div>
+                    <div class="booking-form-row">
+                        <div class="booking-form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="booking-form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Payment Information -->
+                <div class="booking-payment-section">
+                    <h2>Payment Details</h2>
+                    <div class="booking-form-group">
+                        <label for="card-number">Card Number</label>
+                        <input type="text" id="card-number" name="card-number" placeholder="XXXX XXXX XXXX XXXX" maxlength="19" required>
+                    </div>
+                    <div class="booking-form-row">
+                        <div class="booking-form-group">
+                            <label for="expiry">Expiry Date</label>
+                            <input type="text" id="expiry" name="expiry" placeholder="MM/YY" maxlength="5" required>
+                        </div>
+                        <div class="booking-form-group">
+                            <label for="cvv">CVV</label>
+                            <input type="text" id="cvv" name="cvv" placeholder="XXX" maxlength="4" required>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="cta-button">Complete Booking</button>
+            </form>
+        </section>
+
+        <!-- Success Screen (Hidden by Default) -->
+        <section id="booking-success-screen" class="booking-success-screen" style="display: none;">
+            <div class="booking-success-content">
+                <div class="booking-success-icon">✓</div>
+                <h1>Booking Confirmed!</h1>
+                <p class="booking-success-message">Thank you for your purchase. Your tickets have been sent to your email.</p>
+                
+                <div class="booking-summary-box">
+                    <h2>Booking Summary</h2>
+                    <div class="booking-summary-item">
+                        <span class="label">Event:</span>
+                        <span class="value" id="summary-event"></span>
+                    </div>
+                    <div class="booking-summary-item">
+                        <span class="label">Date:</span>
+                        <span class="value" id="summary-date"></span>
+                    </div>
+                    <div class="booking-summary-item">
+                        <span class="label">Tickets:</span>
+                        <span class="value" id="summary-tickets"></span>
+                    </div>
+                    <div class="booking-summary-item">
+                        <span class="label">Total Paid:</span>
+                        <span class="value" id="summary-total"></span>
+                    </div>
+                    <div class="booking-summary-item">
+                        <span class="label">Confirmation Code:</span>
+                        <span class="value" id="confirmation-code"></span>
+                    </div>
+                </div>
+
+                <div class="booking-success-actions">
+                    <a href="events.html" class="cta-button">View Other Events</a>
+                    <a href="index.html" class="cta-button booking-secondary">Return Home</a>
+                </div>
+            </div>
+        </section>
+    </main>
     <footer class="site-footer">
         <div class="footer-container">
             <div class="footer-brand">

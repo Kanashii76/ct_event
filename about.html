@@ -182,5 +182,84 @@
             <p>Made with love and a lot of milk 🥛</p>
         </div>
     </footer>
+    <script>
+        // Event data
+        const eventData = {
+            'two-angry-cows': {
+                name: 'Two Angry Cows',
+                date: 'Saturday, July 20 at 7:00 PM'
+            },
+            'hoofloose': {
+                name: 'Hoofloose',
+                date: 'Saturday, July 27 at 7:00 PM'
+            },
+            'horns-of-winter': {
+                name: 'The Horns of Winter',
+                date: 'Saturday, August 3 at 7:00 PM'
+            },
+            'udder-mystery': {
+                name: 'An Udder Mystery',
+                date: 'Saturday, August 10 at 7:00 PM'
+            },
+            'tbd': {
+                name: 'TBD',
+                date: 'Saturday, August 17 at 7:00 PM'
+            }
+        };
+
+        // Update total price when ticket quantity changes
+        document.getElementById('tickets').addEventListener('input', function() {
+            const tickets = parseInt(this.value) || 1;
+            const totalPrice = tickets * 15;
+            document.getElementById('total-price').textContent = '$' + totalPrice.toFixed(2);
+        });
+
+        // Handle form submission
+        document.getElementById('booking-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const selectedEvent = formData.get('event');
+            
+            if (!selectedEvent) {
+                alert('Please select an event');
+                return;
+            }
+
+            const tickets = parseInt(formData.get('tickets')) || 1;
+            const totalPrice = tickets * 15;
+            const confirmationCode = 'MOOVIE-' + Math.random().toString(36).substr(2, 9).toUpperCase();
+
+            // Show success screen
+            document.getElementById('booking-form').style.display = 'none';
+            document.getElementById('booking-success-screen').style.display = 'block';
+
+            // Populate summary
+            document.getElementById('summary-event').textContent = eventData[selectedEvent].name;
+            document.getElementById('summary-date').textContent = eventData[selectedEvent].date;
+            document.getElementById('summary-tickets').textContent = tickets + ' ticket(s)';
+            document.getElementById('summary-total').textContent = '$' + totalPrice.toFixed(2);
+            document.getElementById('confirmation-code').textContent = confirmationCode;
+
+            // Scroll to top
+            window.scrollTo(0, 0);
+        });
+
+        // Card number formatting
+        document.getElementById('card-number').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            value = value.match(/.{1,4}/g)?.join(' ') || value;
+            e.target.value = value;
+        });
+
+        // Expiry date formatting
+        document.getElementById('expiry').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length >= 2) {
+                value = value.slice(0, 2) + '/' + value.slice(2, 4);
+            }
+            e.target.value = value;
+        });
+    </script>
 </body>
 </html>
